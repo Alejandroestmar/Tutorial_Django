@@ -57,7 +57,7 @@ ROOT_URLCONF = "tutorial_django.urls"
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['f”{BASE_DIR}/templates”'],
+        'DIRS': [f"{BASE_DIR}/templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,7 +79,7 @@ WSGI_APPLICATION = "tutorial_django.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": 'f”{BASE_DIR}/ db.sqlite3"',
+        "NAME": [f"{BASE_DIR}/db.sqlite3"],
     }
 }
 
@@ -123,6 +123,7 @@ USE_TZ = True
 STATIC_URL = "/static/"
 
 STATIC_ROOT = "polls/static"
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
